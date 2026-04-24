@@ -1,79 +1,80 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 * {
   box-sizing: border-box;
 }
 
-/* Add a gray background color with some padding */
 body {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   padding: 20px;
   background: #f1f1f1;
 }
 
-/* Header/Blog Title */
+
 .header {
   padding: 30px;
-  font-size: 40px;
   text-align: center;
-  background: white;
+  background: rgb(186, 228, 123);
+  font-size: 35px;
 }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-/* Right column */
+
+.leftcolumn {
+  flex: 75%;
+}
+
 .rightcolumn {
-  float: left;
-  width: 25%;
+  flex: 25%;
   padding-left: 20px;
 }
 
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
 
-/* Add a card effect for articles */
 .card {
-   background-color: white;
-   padding: 20px;
-   margin-top: 20px;
+  background: rgb(187, 233, 114);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-/* Footer */
+
 .footer {
   padding: 20px;
   text-align: center;
-  background: #ddd;
+  background: #b6d674;
   margin-top: 20px;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
+  .row {
+    flex-direction: column;
+  }
+
+  .rightcolumn {
+    padding-left: 0;
   }
 }
 </style>
 </head>
+
 <body>
 
 <div class="header">
@@ -81,50 +82,76 @@ body {
 </div>
 
 <div class="row">
+
+  
   <div class="leftcolumn">
+
     <div class="card">
       <h2 style="color:red;">UPCOMING REGIONAL MOVIE</h2>
-      <h5>Title description, april 18, 2026</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>SERENG</p>
-      <p>The upcoming regional film *Sereng* is all set to release on 1st May 2026 across Jharkhand, promising a rich cultural experience for audiences. The movie will be released in four languages—Hindi, Nagpuri, Santhali, and Khortha—making it accessible to a diverse regional audience while celebrating local identity and storytelling. Featuring a talented cast including Vivek Nayak, Nitesh Kachhap, and Sweta Prajapati, the film is expected to bring strong performances to the screen. Directed by NPK, *Sereng* is already generating buzz among regional cinema lovers and is anticipated to make a significant impact upon its release.
-.</p>
+      <h5>April 18, 2026</h5>
+
+      <img src="image/Kajal Mundu as Jaimangal.png" alt="Sereng Movie">
+
+      <p><b>SERENG</b></p>
+      <p>
+        The upcoming regional film *Sereng* is set to release on 1st May 2026 across Jharkhand.
+        It will be available in Hindi, Nagpuri, Santhali, and Khortha.
+        Featuring Vivek Nayak, Nitesh Kachhap, and Sweta Prajapati,
+        the film is expected to deliver strong performances and celebrate local culture.
+      </p>
     </div>
+
     <div class="card">
-      <h2 style="color:rgb(203, 46, 46);">regional film policy</h2>
-      <h5>news about regional film policy, april 17, 2026</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Artists unite to demand a strong film policy for the growth and recognition of Jharkhand’s regional cinema industry.
-..</p>
-      <p>The Jharkhand Kalakar Andolan Sangharsh Samiti has been continuously working to put pressure on the state government to introduce a dedicated film policy aimed at strengthening the regional film industry in Jharkhand. The group, representing local artists and filmmakers, has been raising its voice through campaigns, discussions, and public appeals, emphasizing the urgent need for structured support, funding opportunities, and better infrastructure for regional cinema. Their efforts highlight how a well-defined policy could not only uplift local languages like Nagpuri, Santhali, and Khortha but also create employment, preserve cultural identity, and encourage new talent. As the movement gains momentum, it reflects the growing determination of Jharkhand’s creative community to secure recognition and sustainable growth for its film industry.
-.</p>
+      <h2 style="color:brown;">REGIONAL FILM POLICY</h2>
+      <h5>April 17, 2026</h5>
+
+      <img src="image/jkass.jpeg" alt="Film Policy">
+
+      <p>
+        Artists are demanding a strong film policy to support Jharkhand’s cinema industry.
+      </p>
+      <p>
+        The Jharkhand Kalakar Andolan Sangharsh Samiti is pushing for funding,
+        infrastructure, and recognition for regional films.
+        A proper policy could boost employment and preserve local culture.
+      </p>
     </div>
+
   </div>
+
+  
   <div class="rightcolumn">
+
     <div class="card">
       <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
+      <img src="image/kajal image 1.jpg" alt="Profile">
       <p>
-
-I’m passionate about exploring and promoting regional culture, storytelling, and cinema, especially from Jharkhand. Through my work, I enjoy sharing updates, insights, and stories that highlight local talent and creative efforts, helping bring wider attention to voices that deserve to be heard. Whether it’s films, artists, or cultural moments, I aim to connect audiences with authentic and meaningful content.
-..</p>
+        I promote regional culture and cinema from Jharkhand,
+        sharing stories and updates about local talent.
+      </p>
     </div>
+
     <div class="card">
       <h3>Popular Post</h3>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div>
+      <img src="image/post1.jpg"><br><br>
+      <img src="image/post2.jpg"><br><br>
+      <img src="image/post3.jpg">
     </div>
+
     <div class="card">
-      <h3>Follow Me</h3>
-      <p>13mundu@gmail.com <br>
-      phone-8210202376</p>
+      <h3>Contact</h3>
+      <p>
+        Email: 13mundu@gmail.com <br>
+        Phone: 8210202376
+      </p>
     </div>
+
   </div>
+
 </div>
 
 <div class="footer">
-  <h2>Footer</h2>
+  <h2>Entertainment world</h2>
 </div>
 
 </body>
